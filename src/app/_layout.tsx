@@ -5,12 +5,13 @@ const RootLayout = () => {
   return (
     <Tabs>
       <Tabs.Screen
-        name='index'
+        name='allocations'
         options={{
           title: 'Allocations',
           tabBarIcon: ({ color, size }) => (
             <MaterialIcons name='account-tree' color={color} size={size} />
           ),
+          headerShown: false,
         }}
       />
       <Tabs.Screen
@@ -26,6 +27,7 @@ const RootLayout = () => {
           ),
         }}
       />
+      <Tabs.Screen name='index' options={{ href: null }} />
     </Tabs>
   );
 };
